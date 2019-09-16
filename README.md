@@ -9,7 +9,7 @@ cat             |  tbl
 ![](docs_content/cat.png)  |  ![](docs_content/rstgrid.png)
 
 Check out this recorded example:
-[![asciicast](https://asciinema.org/a/owDjDWxgsoH7pHd8wuVVb91Ig.png)](https://asciinema.org/a/owDjDWxgsoH7pHd8wuVVb91Ig)
+[![asciicast](https://asciinema.org/a/268740.png)](https://asciinema.org/a/268740)
 ## Requirements
 * Python 3.4+
 
