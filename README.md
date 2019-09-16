@@ -38,7 +38,7 @@ tbl file.csv --select '#Item#Tax'
 ```  
 :exclamation: Both `headers` and `select` use the first charcter as a separator, 
 it can be any character (kinda like a `sed` expressions)  
-:exclamation: The headers specified with this option are case-sensitive
+:exclamation: The headers specified with this option are case-sensitive  
 :star2: The `headers` and `select` headers can be used together
 
 * `--format` (defualt: rstgrid)  
