@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='tbl',
+    name='clitbl',
     version='0.0.1',
     author="Ron Serruya",
     author_email="ron.serruya@gmail.com",

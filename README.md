@@ -15,7 +15,7 @@ Check out this recorded example:
 
 ## Installation
 ```shell
-pip install --user tbl
+pip install --user clitbl
 ```
 
 ## Usage options
