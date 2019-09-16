@@ -1,7 +1,7 @@
 import click
 from typing import List, Optional
 
-from main import print_tbl
+from .main import print_tbl
 
 
 def validate_headers(ctx, param, value: str) -> Optional[List[str]]:
