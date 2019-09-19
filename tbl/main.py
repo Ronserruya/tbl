@@ -29,9 +29,6 @@ def print_tbl(file: str, explicit_headers: Optional[List[str]], select: Optional
             except StopIteration:
                 raise click.UsageError("csv file is empty")
 
-            if len(set(headers)) != len(headers):
-                raise click.UsageError("tbl does not support duplicate headers")
-
             if select is not None:
                 # Verify that at least some of the selected headers are present
                 if len(set(headers).intersection(set(select))) == 0:
@@ -42,7 +39,7 @@ def print_tbl(file: str, explicit_headers: Optional[List[str]], select: Optional
             selected_headers = select or headers
 
             # Create a list of dictionaries with the data
-            table = [{h: v for h, v in zip(headers, row)
+            table = [{i: v for i, (h, v) in enumerate(zip(headers, row))
                       if h in selected_headers}
                      for row in reader]
     except FileNotFoundError:
@@ -51,6 +48,7 @@ def print_tbl(file: str, explicit_headers: Optional[List[str]], select: Optional
     rapidtables.print_table(table,
                             tablefmt=format,
                             wrap_text=True,
+                            headers=selected_headers,
                             max_column_width=find_max_column_width(selected_headers),
                             allow_multiline=True,
                             align=rapidtables.ALIGN_LEFT)
